@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NeViewControllerTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫번째 뷰 컨트롤러" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byc-ja-9zF">
+                                <rect key="frame" x="144" y="110" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcZ-Iy-2Sz">
+                                <rect key="frame" x="130" y="215" width="155" height="30"/>
+                                <state key="normal" title="두번째 뷰 컨트롤러로 이동"/>
+                                <connections>
+                                    <action selector="moveSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="urO-mU-FJy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DcZ-Iy-2Sz" firstAttribute="top" secondItem="byc-ja-9zF" secondAttribute="bottom" constant="84" id="30c-J2-Km9"/>
+                            <constraint firstItem="byc-ja-9zF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="HEC-eh-93j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DcZ-Iy-2Sz" secondAttribute="bottom" constant="617" id="UIl-si-9JT"/>
+                            <constraint firstItem="byc-ja-9zF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="fVE-Ad-XIo"/>
+                            <constraint firstItem="DcZ-Iy-2Sz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="fj7-fM-qaf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byc-ja-9zF" secondAttribute="trailing" constant="143" id="oxc-Pu-E4Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DcZ-Iy-2Sz" secondAttribute="trailing" constant="129" id="tgW-2s-qOR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lblFirst" destination="byc-ja-9zF" id="MTy-cx-lcO"/>
+                        <segue destination="ouN-eM-N55" kind="show" id="aCT-mk-SRx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+        <!--Second View-->
+        <scene sceneID="mi2-9f-86c">
+            <objects>
+                <viewController storyboardIdentifier="SecondView" id="ouN-eM-N55" customClass="SecondView" customModule="NeViewControllerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r1Q-Yd-tG9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두번째 뷰 컨트롤러" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exd-bF-zQm">
+                                <rect key="frame" x="144" y="107" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBu-Kt-B4I">
+                                <rect key="frame" x="182" y="212" width="52" height="30"/>
+                                <state key="normal" title="이전으로"/>
+                                <connections>
+                                    <action selector="movePrev:" destination="ouN-eM-N55" eventType="touchUpInside" id="4t4-eM-Acz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L0f-Nr-HFr" firstAttribute="trailing" secondItem="zBu-Kt-B4I" secondAttribute="trailing" constant="180" id="Grn-wy-Nir"/>
+                            <constraint firstItem="zBu-Kt-B4I" firstAttribute="top" secondItem="exd-bF-zQm" secondAttribute="bottom" constant="84" id="H3K-BV-Zi9"/>
+                            <constraint firstItem="exd-bF-zQm" firstAttribute="top" secondItem="L0f-Nr-HFr" secondAttribute="top" constant="63" id="LCZ-5T-JVE"/>
+                            <constraint firstItem="L0f-Nr-HFr" firstAttribute="trailing" secondItem="exd-bF-zQm" secondAttribute="trailing" constant="143" id="Zdo-jz-5g2"/>
+                            <constraint firstItem="L0f-Nr-HFr" firstAttribute="bottom" secondItem="zBu-Kt-B4I" secondAttribute="bottom" constant="620" id="cqN-UO-Ghu"/>
+                            <constraint firstItem="exd-bF-zQm" firstAttribute="leading" secondItem="L0f-Nr-HFr" secondAttribute="leading" constant="144" id="mkf-UY-G1K"/>
+                            <constraint firstItem="zBu-Kt-B4I" firstAttribute="leading" secondItem="L0f-Nr-HFr" secondAttribute="leading" constant="182" id="q65-X9-TxM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L0f-Nr-HFr"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblSecond" destination="exd-bF-zQm" id="hk3-w0-Hod"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1G-UK-MhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="110"/>
         </scene>
     </scenes>
 </document>

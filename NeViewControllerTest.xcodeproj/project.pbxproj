@@ -14,6 +14,7 @@
 		B83F52B92288090D006A454C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83F52B72288090D006A454C /* LaunchScreen.storyboard */; };
 		B83F52C42288090D006A454C /* NeViewControllerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F52C32288090D006A454C /* NeViewControllerTestTests.swift */; };
 		B83F52CF2288090D006A454C /* NeViewControllerTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F52CE2288090D006A454C /* NeViewControllerTestUITests.swift */; };
+		B83F52DE22880999006A454C /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F52DD22880999006A454C /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B83F52CA2288090D006A454C /* NeViewControllerTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeViewControllerTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83F52CE2288090D006A454C /* NeViewControllerTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeViewControllerTestUITests.swift; sourceTree = "<group>"; };
 		B83F52D02288090E006A454C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B83F52DD22880999006A454C /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		B83F52AD2288090C006A454C /* NeViewControllerTest */ = {
 			isa = PBXGroup;
 			children = (
+				B83F52DC2288095D006A454C /* SecondView */,
 				B83F52AE2288090C006A454C /* AppDelegate.swift */,
 				B83F52B02288090C006A454C /* ViewController.swift */,
 				B83F52B22288090C006A454C /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				B83F52D02288090E006A454C /* Info.plist */,
 			);
 			path = NeViewControllerTestUITests;
+			sourceTree = "<group>";
+		};
+		B83F52DC2288095D006A454C /* SecondView */ = {
+			isa = PBXGroup;
+			children = (
+				B83F52DD22880999006A454C /* SecondView.swift */,
+			);
+			path = SecondView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83F52DE22880999006A454C /* SecondView.swift in Sources */,
 				B83F52B12288090C006A454C /* ViewController.swift in Sources */,
 				B83F52AF2288090C006A454C /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N82ZFP7PC6;
 				INFOPLIST_FILE = NeViewControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.anjeundeun.NeViewControllerTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N82ZFP7PC6;
 				INFOPLIST_FILE = NeViewControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.anjeundeun.NeViewControllerTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
